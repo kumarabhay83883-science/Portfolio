@@ -1,62 +1,50 @@
-/* ==========================================================================
-   1. GLOBAL STYLES & RESET
-   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-    padding-bottom: 50px;
-}
-
-a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #1d4ed8;
-    text-decoration: underline;
-}
-
-/* Container for Page Content */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* ==========================================================================
-   2. HERO / PROFILE SECTION
-   ========================================================================== */
-/* Google Font Import for clean typography */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-body {
-    margin: 0;
-    padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #e9eff5; /* Reference site jaisa soft light-blue tint */
+}
+
+body {
+    background-color: #dce7f0;
     color: #2d3748;
 }
 
-/* Hero Section Container */
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: transparent;
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.navbar nav a:hover {
+    color: #1a202c;
+}
+
+/* Hero Section Styling */
 .hero-section {
     width: 100%;
-    min-height: 85vh;
+    min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #dce7f0; /* Soft atmospheric background */
-    padding: 40px 20px;
-    box-sizing: border-box;
+    padding: 20px 8%;
 }
 
 .hero-container {
@@ -65,10 +53,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    gap: 60px;
 }
 
-/* Left Image Styling */
 .hero-image {
     flex: 1;
     display: flex;
@@ -76,159 +63,57 @@ body {
 }
 
 .hero-image img {
-    max-width: 420px;
     width: 100%;
+    max-width: 400px;
     height: auto;
-    border-radius: 16px; /* Halka rounded corners */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
     object-fit: cover;
 }
 
-/* Right Content Styling */
 .hero-content {
     flex: 1.2;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 
 .hero-content h1 {
-    font-size: 3.2rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: #1a202c;
+    color: #ffffff;
     margin-bottom: 10px;
-    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .hero-content .subtitle {
     font-size: 1.2rem;
     color: #4a5568;
-    margin-bottom: 30px;
-    font-weight: 400;
+    margin-bottom: 35px;
 }
 
-/* Pill-Shaped Button */
 .btn-discover {
     display: inline-block;
-    padding: 14px 32px;
-    background-color: #1e293b; /* Dark navy/slate button */
+    padding: 14px 34px;
+    background-color: #212936;
     color: #ffffff;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 50px; /* Full pill shape */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(30, 41, 59, 0.15);
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
 }
 
 .btn-discover:hover {
     background-color: #0f172a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(30, 41, 59, 0.25);
 }
 
-/* Mobile Responsive */
+/* Mobile responsive */
 @media (max-width: 768px) {
     .hero-container {
         flex-direction: column;
         text-align: center;
     }
-    
-    .hero-content {
-        align-items: center;
-    }
-
     .hero-content h1 {
-        font-size: 2.3rem;
-    }
-}
-
-/* ==========================================================================
-   3. SECTION HEADINGS
-   ========================================================================== */
-.section-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 20px;
-    border-left: 4px solid #2563eb;
-    padding-left: 12px;
-}
-
-.section {
-    margin-bottom: 45px;
-}
-
-/* ==========================================================================
-   4. CARDS (Education, Experience, Projects)
-   ========================================================================== */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.08);
-}
-
-.card h3 {
-    font-size: 1.2rem;
-    color: #0f172a;
-    margin-bottom: 6px;
-}
-
-.card .meta {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-.card p {
-    font-size: 0.95rem;
-    color: #475569;
-    margin-bottom: 15px;
-}
-
-/* Tech / Topic Tags (Pills) */
-.tag-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tag {
-    background-color: #f1f5f9;
-    color: #475569;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
-}
-
-/* ==========================================================================
-   5. RESPONSIVE DESIGN (Mobile Friendly)
-   ========================================================================== */
-@media (max-width: 640px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    .card-grid {
-        grid-template-columns: 1fr;
+        font-size: 2.2rem;
     }
 }
