@@ -73,6 +73,8 @@ body {
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    transition: transform 0.2s ease-out;
+    will-change: Transform;
 }
 
 /* Dark Overlay taaki Text ekdam clear padha jaye */
