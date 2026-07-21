@@ -38,80 +38,55 @@ body {
     color: #1a202c;
 }
 
-/* Hero Section - Full Height & Edge-to-Edge Image */
+/* Hero Section */
 .hero-section {
     width: 100%;
-    min-height: 100vh; /* Puri screen ki height */
+    min-height: 80vh;
     display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    background-color: #dce7f0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 8%;
 }
 
 .hero-container {
+    max-width: 1100px;
     width: 100%;
-    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 60px;
 }
 
-/* Left Image - Full Screen Edge Cover */
 .hero-image {
     flex: 1;
-    height: 100vh;
     display: flex;
+    justify-content: center;
 }
 
 .hero-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Photo stretch bina distrot hue pure area ko cover karegi */
-    object-position: top center; /* Face properly visible rahega */
-    border-radius: 0; /* Padding/Card border khatam */
-    box-shadow: none;
+    max-width: 380px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
 }
 
-/* Right Content Styling */
 .hero-content {
-    flex: 1;
-    padding: 0 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex: 1.2;
 }
 
 .hero-content h1 {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
     font-weight: 700;
     color: #1e293b;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .hero-content .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: #475569;
-    margin-bottom: 35px;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-    }
-    .hero-image {
-        height: 50vh;
-        width: 100%;
-    }
-    .hero-content {
-        padding: 40px 20px;
-        align-items: center;
-        text-align: center;
-    }
+    margin-bottom: 30px;
 }
 
 .btn-discover {
