@@ -191,18 +191,25 @@ body {
 
 .social-links {
     display: flex;
-    align-items: center; /* 👈 Sabhi icons ko exact middle line me align karega */
-    gap: 20px;
+    align-items: center;
+    gap: 18px;
     margin-top: 15px;
 }
 
 .social-links a {
     color: #0f172a;
-    font-size: 1.6rem;
-    display: inline-flex; /* 👈 Layout distortion fix karega */
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
     align-items: center;
     justify-content: center;
     transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* Mail icon ka size baaki dono ke visual weight se match karne ke liye */
+.social-links a i.fa-envelope {
+    font-size: 1.35rem; 
 }
 
 .social-links a:hover {
