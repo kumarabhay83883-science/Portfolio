@@ -9,6 +9,12 @@ body {
     background-color: #e2ebf3;
     color: #2d3748;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Smooth Scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -18,6 +24,9 @@ body {
     align-items: center;
     padding: 20px 8%;
     background-color: #dbe6f0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .navbar .logo {
@@ -32,6 +41,7 @@ body {
     color: #4a5568;
     font-size: 0.95rem;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .navbar nav a:hover {
@@ -46,10 +56,9 @@ body {
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Text ko left/center align rakhne ke liye */
+    justify-content: flex-start;
 }
 
-/* Background Image Full Screen Coverage */
 .hero-image {
     position: absolute;
     top: 0;
@@ -62,11 +71,10 @@ body {
 .hero-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Poori screen par photo stretch bina distort hue fit hogi */
+    object-fit: cover;
     object-position: center top;
 }
 
-/* Dark Overlay taaki Text Aasani se Padha Jaye */
 .hero-section::before {
     content: '';
     position: absolute;
@@ -74,11 +82,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Halka dark shadow photo ke upar */
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
 }
 
-/* Text Over Image */
 .hero-content {
     position: relative;
     z-index: 3;
@@ -103,8 +110,8 @@ body {
 .btn-discover {
     display: inline-block;
     padding: 14px 36px;
-    background-color: #ffffff;
-    color: #0f172a;
+    background-color: #1e293b;
+    color: #ffffff;
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -115,26 +122,8 @@ body {
 }
 
 .btn-discover:hover {
-    background-color: #e2e8f0;
-    transform: translateY(-2px);
-}
-
-.btn-discover {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #1e293b;
-    color: #ffffff;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-discover:hover {
     background-color: #0f172a;
+    transform: translateY(-2px);
 }
 
 /* Main Content Layout */
@@ -178,11 +167,12 @@ body {
     border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 24px;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .card h3 {
@@ -246,6 +236,11 @@ body {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-contact:hover {
+    background: #1d4ed8;
 }
 
 .footer {
@@ -253,6 +248,24 @@ body {
     padding: 30px;
     color: #64748b;
     font-size: 0.9rem;
+}
+
+/* ==========================================
+   SCROLL ANIMATION STYLES (Maya Style)
+   ========================================== */
+
+/* Initially hidden and shifted down */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+/* When visible in viewport */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Responsive */
