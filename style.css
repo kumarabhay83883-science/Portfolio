@@ -189,6 +189,7 @@ body {
     font-weight: 500;
 }
 
+/* Clean Social Links Fix */
 .social-links {
     display: flex;
     align-items: center;
@@ -199,17 +200,16 @@ body {
 .social-links a {
     color: #0f172a;
     font-size: 1.5rem;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none !important; /* 👈 Underline aur extra space khatam karne ke liye */
+    line-height: 1 !important;
+    display: inline-block;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
-/* Mail icon ka size baaki dono ke visual weight se match karne ke liye */
-.social-links a i.fa-envelope {
-    font-size: 1.35rem; 
+/* Mail Icon Specific Baseline Balance */
+.social-links a.social-mail i {
+    transform: translateY(1px); /* 👈 Pixel perfect vertical centering */
+    font-size: 1.35rem;
 }
 
 .social-links a:hover {
