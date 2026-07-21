@@ -30,13 +30,12 @@
         </div>
         <div class="hero-content">
             <h1>Hello, I am Abhay!</h1>
-            <p class="subtitle">Physics Postgraduate, 
-                Science/Tech Enthusiast</p>
+            <p class="subtitle">Physics Postgraduate, Science/Tech Enthusiast</p>
             <a href="#about" class="btn-discover">DISCOVER MORE</a>
         </div>
     </section>
 
-    <!-- Main Content Flow (Strictly Below Hero Section) -->
+    <!-- Main Content Flow -->
     <main class="main-container">
 
         <!-- About Section -->
@@ -78,7 +77,6 @@
                         by developing advanced materials and electronic devices for future applications. Particularly
                         interested in sustainable energy technologies, functional materials, semiconductor devices, and energy storage systems.
                     </p>
-                   
 
                     <!-- Download Resume Button -->
                     <a href="Abhay_CV.pdf" download class="btn-resume">DOWNLOAD RESUME</a>
@@ -87,7 +85,7 @@
             </div>
         </section>
 
-       <!-- Featured Projects Section (M.Sc. Dissertation Focus) -->
+        <!-- Featured Projects Section (M.Sc. Dissertation Focus) -->
         <section id="projects" class="section">
             <h2 class="section-title">M.Sc. Dissertation Project</h2>
             
@@ -103,15 +101,22 @@
                     ambient drying, controlled muffle furnace heat treatment, and contact poling for electromechanical response.
                 </p>
 
-                <!-- Project Image & Graph Gallery -->
-                <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="thin_film_sample.jpg" alt="Thin Film Sample Fabrication">
-                        <span class="caption">Fabricated Bio-Thin Film Sample</span>
+                <!-- Interactive Results Tab System (New Dynamic Display) -->
+                <div class="result-tabs-container">
+                    <p class="tab-label">Select Result / Characterization Spectrum:</p>
+                    
+                    <!-- Buttons to Toggle -->
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" onclick="showResult('sample', this)">Thin Film Sample</button>
+                        <button class="tab-btn" onclick="showResult('voltage', this)">Voltage Output</button>
+                        <button class="tab-btn" onclick="showResult('ftir', this)">FTIR Spectrum</button>
+                        <button class="tab-btn" onclick="showResult('xrd', this)">XRD Pattern</button>
                     </div>
-                    <div class="gallery-item">
-                        <img src="piezo_result_graph.jpg" alt="Piezoelectric Voltage Output Graph">
-                        <span class="caption">Voltage Output / Characterization Graph</span>
+
+                    <!-- Single Viewer Frame -->
+                    <div class="result-display-frame">
+                        <img id="result-viewer-img" src="thin_film_sample.jpg" alt="Fabricated Bio-Thin Film Sample">
+                        <p id="result-viewer-caption" class="caption">Fabricated Bio-Based Piezoelectric Thin Film Sample</p>
                     </div>
                 </div>
 
@@ -160,6 +165,7 @@
     <footer class="footer">
         <p>© 2026 Abhay Kumar. All Rights Reserved.</p>
     </footer>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
