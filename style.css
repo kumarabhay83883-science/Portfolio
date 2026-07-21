@@ -48,12 +48,67 @@ html {
     color: #1a202c;
 }
 
-/* Full Screen Hero Section */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #e2ebf3;
+    color: #2d3748;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #dbe6f0;
+    position: fixed; /* Navbar hamesha top pe rahegi */
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a202c;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #1a202c;
+}
+
+/* ==========================================
+   FIXED PARALLAX HERO SECTION (MAYA STYLE)
+   ========================================== */
+
 .hero-section {
-    position: relative;
-    width: 100vw;
+    position: fixed; /* Photo hamesha screen par ek jagah tikhi rahegi */
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
-    overflow: hidden;
+    z-index: 1; /* Lowest level */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -65,7 +120,6 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
 }
 
 .hero-image img {
@@ -82,7 +136,7 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.35); /* Text readability ke liye overlay */
     z-index: 2;
 }
 
@@ -91,6 +145,7 @@ html {
     z-index: 3;
     padding-left: 8%;
     color: #ffffff;
+    margin-top: 60px; /* Navbar gap adjustment */
 }
 
 .hero-content h1 {
@@ -126,11 +181,18 @@ html {
     transform: translateY(-2px);
 }
 
-/* Main Content Layout */
+/* ==========================================
+   CONTENT THAT SLIDES OVER THE HERO IMAGE
+   ========================================== */
+
 .main-container {
+    position: relative;
+    z-index: 10; /* Image ke UPAR se glide karega */
+    margin-top: 100vh; /* Pehla 100vh pura hero photo dikhega */
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px;
 }
 
 .section {
@@ -138,7 +200,7 @@ html {
     background: #ffffff;
     padding: 35px;
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .section-title {
@@ -244,6 +306,9 @@ html {
 }
 
 .footer {
+    position: relative;
+    z-index: 10;
+    background-color: #e2ebf3;
     text-align: center;
     padding: 30px;
     color: #64748b;
@@ -251,10 +316,9 @@ html {
 }
 
 /* ==========================================
-   SCROLL ANIMATION STYLES (Maya Style)
+   SCROLL REVEAL ANIMATIONS
    ========================================== */
 
-/* Initially hidden and shifted down */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -262,7 +326,6 @@ html {
     will-change: opacity, transform;
 }
 
-/* When visible in viewport */
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
@@ -270,10 +333,6 @@ html {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
     .hero-content h1 {
         font-size: 2.3rem;
     }
