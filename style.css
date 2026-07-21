@@ -431,3 +431,79 @@ body {
         grid-template-columns: 1fr;
     }
 }
+/* ==========================================
+   INTERACTIVE RESULT TABS STYLING
+   ========================================== */
+
+.result-tabs-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 24px;
+}
+
+.tab-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 12px;
+}
+
+.tab-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 8px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #334155;
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.tab-btn.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.25);
+}
+
+.result-display-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 280px;
+}
+
+.result-display-frame img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.result-display-frame .caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    text-align: center;
+}
