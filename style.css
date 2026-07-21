@@ -23,7 +23,7 @@ body {
     align-items: center;
     padding: 20px 8%;
     background-color: rgba(219, 230, 240, 0.9);
-    backdrop-filter: blur(8px); /* Smooth glass effect */
+    backdrop-filter: blur(8px);
     position: sticky;
     top: 0;
     width: 100%;
@@ -54,7 +54,7 @@ body {
    ========================================== */
 
 .hero-section {
-    position: relative; /* Fixed hata kar relative kar diya taaki freeze na ho */
+    position: relative;
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -70,7 +70,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* Smooth movement and scale effect on scroll */
     transition: transform 0.1s ease-out;
     will-change: transform;
 }
@@ -134,14 +133,14 @@ body {
 }
 
 /* ==========================================
-   MAIN CONTENT (GLIDES NATURAL WITH SCROLL)
+   MAIN CONTENT CONTAINER
    ========================================== */
 
 .main-container {
     position: relative;
     z-index: 10;
     max-width: 1000px;
-    margin: -60px auto 40px auto; /* Subtle overlap effect on top of hero bottom */
+    margin: -60px auto 40px auto;
     padding: 0 20px;
 }
 
@@ -157,17 +156,103 @@ body {
     font-size: 1.6rem;
     font-weight: 700;
     color: #0f172a;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     border-left: 4px solid #2563eb;
     padding-left: 12px;
 }
 
-.about-text {
-    font-size: 1.05rem;
-    color: #475569;
+/* ==========================================
+   ABOUT SECTION (2-COLUMN LAYOUT)
+   ========================================== */
+
+.about-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
-/* Cards (Projects) */
+.about-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border-right: 1px solid #cbd5e1;
+    padding-right: 25px;
+}
+
+.meta-item {
+    font-size: 0.9rem;
+}
+
+.meta-label {
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: 1px;
+    display: block;
+    font-size: 0.78rem;
+    margin-bottom: 2px;
+}
+
+.meta-value {
+    color: #475569;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    gap: 18px;
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #1e293b;
+    font-size: 1.3rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #2563eb;
+    transform: translateY(-2px);
+}
+
+.about-bio {
+    flex: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-bio p {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.btn-resume {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 28px;
+    border: 1px solid #1e293b;
+    background: transparent;
+    color: #1e293b;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+    background-color: #1e293b;
+    color: #ffffff;
+}
+
+/* ==========================================
+   CARDS (PROJECTS)
+   ========================================== */
+
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -278,9 +363,22 @@ body {
     transform: translateY(0);
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2.3rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .about-meta {
+        border-right: none;
+        border-bottom: 1px solid #cbd5e1;
+        padding-right: 0;
+        padding-bottom: 20px;
+        width: 100%;
     }
 }
