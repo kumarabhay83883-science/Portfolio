@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const revealElements = document.querySelectorAll(".reveal");
     revealElements.forEach((el) => observer.observe(el));
-    // Interactive Project Results Tab Switcher
+});
+
+// Interactive Project Results Tab Switcher
 function showResult(resultType, btnElement) {
     const viewerImg = document.getElementById("result-viewer-img");
     const viewerCaption = document.getElementById("result-viewer-caption");
@@ -40,19 +42,18 @@ function showResult(resultType, btnElement) {
     // Add active class to clicked button
     btnElement.classList.add("active");
 
-    // Change image and caption based on selection
+    // Dynamic Image & Caption Switcher
     if (resultType === 'sample') {
-        viewerImg.src = "Thin_Film_Sample.jpg"; // Replace with your image file name
+        viewerImg.src = "thin_film_sample.jpg"; 
         viewerCaption.innerText = "Fabricated Bio-Based Piezoelectric Thin Film Sample";
     } else if (resultType === 'voltage') {
-        viewerImg.src = "Voltage_Output.jpg"; // Replace with your graph image file name
+        viewerImg.src = "piezo_result_graph.jpg"; 
         viewerCaption.innerText = "Piezoelectric Voltage Output & Electromechanical Response";
     } else if (resultType === 'ftir') {
-        viewerImg.src = "FTIR_Spectrum.jpg"; // Replace with your FTIR image file name
+        viewerImg.src = "ftir_spectrum.jpg"; 
         viewerCaption.innerText = "FTIR Chemical Characterization & Functional Group Analysis";
     } else if (resultType === 'xrd') {
-        viewerImg.src = "XRD_Pattern.jpg"; // Replace with your XRD image file name
+        viewerImg.src = "xrd_pattern.jpg"; 
         viewerCaption.innerText = "XRD Crystallographic & Structural Alignment Spectrum";
     }
 }
-});
