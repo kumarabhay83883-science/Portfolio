@@ -1,147 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhay Kumar | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- FontAwesome for LinkedIn and GitHub Logos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhay Kumar - Portfolio</title>
+  <!-- Font Awesome Icons for GitHub & LinkedIn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="logo">Abhay Kumar</div>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">Abhay Kumar</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="Profile.png" alt="Abhay Kumar">
-            </div>
-            <div class="hero-content">
-                <h1>Hello, I am Abhay!</h1>
-                <p class="subtitle">Physics Postgraduate & Aspiring Technical Specialist</p>
-                <a href="#about" class="btn-discover">DISCOVER MORE</a>
-            </div>
+  <!-- Hero Section (Full Monitor / 100vh Height) -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="Profile.png" alt="Abhay Kumar">
+    </div>
+    <div class="hero-content">
+      <h1>Hello, I am Abhay!</h1>
+      <p class="subtitle">Physics Postgraduate & Aspiring Technical Specialist</p>
+      <a href="#about" class="btn discover-btn">DISCOVER MORE</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-card">
+      <div class="about-info">
+        <p><strong>NAME :</strong><br>Abhay Kumar</p>
+        <p><strong>INSTITUTE :</strong><br>J.C. Bose University of Science & Technology, YMCA</p>
+        <p><strong>HOMETOWN :</strong><br>Faridabad, Haryana</p>
+        
+        <!-- Social Logos -->
+        <div class="social-links">
+          <a href="https://github.com/kumarabhay83883-science" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
         </div>
-    </section>
+      </div>
 
-    <!-- Main Content Container (Hero ke Niche Safai Se) -->
-    <main class="main-container">
+      <div class="about-bio">
+        <p>Passionate about experimental research, materials science, and clean programming in C & Data Structures. Aspiring to bridge core physics concepts with software and technological innovations.</p>
+        <p>Beyond academics, I enjoy reading non-fiction literature, fitness training, and playing the Indian bamboo flute.</p>
+        
+        <!-- Download Resume Button (Opens/Downloads Abhay_CV.pdf) -->
+        <a href="Abhay_CV.pdf" download="Abhay_CV.pdf" target="_blank" class="download-btn">DOWNLOAD RESUME</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="about-container">
-                
-                <!-- Left Column: Personal Meta Details -->
-                <div class="about-meta">
-                    <div class="meta-item">
-                        <span class="meta-label">NAME :</span>
-                        <span class="meta-value">Abhay Kumar</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">INSTITUTE :</span>
-                        <span class="meta-value">J.C. Bose University of Science & Technology, YMCA</span>
-                    </div>
-                    <div class="meta-item">
-                        <span class="meta-label">HOMETOWN :</span>
-                        <span class="meta-value">Faridabad, Haryana</span>
-                    </div>
-
-                    <!-- Social Links (Logos) -->
-                    <div class="social-links">
-                        <a href="https://github.com/kumarabhay83883-science" target="_blank" title="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right Column: Bio Text & Resume Download Button -->
-                <div class="about-bio">
-                    <p>
-                        Passionate about experimental research, materials science, and clean programming in C & Data Structures. Aspiring to bridge core physics concepts with software and technological innovations.
-                    </p>
-                    <p>
-                        Beyond academics, I enjoy reading non-fiction literature, fitness training, and playing the Indian bamboo flute.
-                    </p>
-
-                    <!-- Download Resume Button -->
-                    <a href="Abhay_CV.pdf" download class="btn-resume">DOWNLOAD RESUME</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="section">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="card-grid">
-                
-                <div class="card">
-                    <h3>Bio-Based Piezoelectric Thin Films</h3>
-                    <div class="meta">Research Project | M.Sc. Physics</div>
-                    <p>Fabrication and characterization of bio-based piezoelectric thin films using Aloe Vera and nanocellulose composites.</p>
-                    <div class="tag-container">
-                        <span class="tag">Thin Films</span>
-                        <span class="tag">Materials Science</span>
-                        <span class="tag">Experimental</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <h3>C & Data Structures Projects</h3>
-                    <div class="meta">Software Development</div>
-                    <p>Implementation of custom data structures, memory management algorithms, and clean programming principles in C.</p>
-                    <div class="tag-container">
-                        <span class="tag">C</span>
-                        <span class="tag">DSA</span>
-                        <span class="tag">Algorithms</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="section">
-            <h2 class="section-title">Skills & Knowledge</h2>
-            <div class="skills-grid">
-                <div class="skill-box">Solid State Physics</div>
-                <div class="skill-box">Materials Characterization</div>
-                <div class="skill-box">C Programming</div>
-                <div class="skill-box">Data Structures & Algorithms</div>
-                <div class="skill-box">Optics & Lasers</div>
-                <div class="skill-box">HTML & CSS</div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="section">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>Interested in collaborating or discussing technical projects? Feel free to reach out!</p>
-            <div class="contact-links">
-                <a href="https://github.com/kumarabhay83883-science" target="_blank" class="btn-contact">GitHub Profile</a>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <p>© 2026 Abhay Kumar. All Rights Reserved.</p>
-    </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
