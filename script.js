@@ -35,6 +35,6 @@ window.addEventListener('scroll', () => {
     if (heroImg) {
         let scrollValue = window.scrollY;
         // Image slowly moves down and zooms out slightly while scrolling
-        heroImg.style.transform = `translateY(${scrollValue * 0.35}px) scale(${1 + scrollValue * 0.0003})`;
+       heroImg.style.transform = `translateY(${scrollValue * 0.35}px) scale(${1 + scrollValue * 0.0003})`;
     }
 });
