@@ -29,11 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const revealElements = document.querySelectorAll(".reveal");
   revealElements.forEach((el) => observer.observe(el));
   
- // Slow Gliding (Parallax) Effect on Scroll
-window.addEventListener('scroll', () => {
-    const heroImg = document.querySelector('.hero-bg img');
+ // Smooth Parallax Gliding Effect
+window.addEventListener('scroll', function() {
+    var heroImg = document.querySelector('.hero-bg img');
     if (heroImg) {
-        let scrollValue = window.scrollY;
+        var scrollValue = window.scrollY;
+        // Image slowly moves down and scales smoothly on scroll
         heroImg.style.transform = 'translateY(' + (scrollValue * 0.35) + 'px) scale(' + (1 + scrollValue * 0.0003) + ')';
     }
 });
