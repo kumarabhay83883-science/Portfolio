@@ -189,15 +189,7 @@ body {
     font-weight: 500;
 }
 
-/* Clean Social Links Fix */
-.social-links {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    margin-top: 15px;
-}
-
-/* Fix for Icon Bottom Clipping */
+/* Social Links Layout & Alignment Fix */
 .social-links {
     display: flex;
     align-items: center;
@@ -207,12 +199,11 @@ body {
 
 .social-links a {
     color: #0f172a;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-decoration: none !important;
-    display: inline-block;
-    line-height: normal !important; /* 👈 Icons ka bottom/top cut nahi hone dega */
-    height: auto !important;
-    overflow: visible !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
@@ -220,6 +211,7 @@ body {
     color: #2563eb;
     transform: translateY(-3px);
 }
+
 .about-bio {
     flex: 1.6;
     display: flex;
